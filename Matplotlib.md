@@ -3,7 +3,6 @@
 - [Matplotlib](#matplotlib)
   - [Some Useful Links](#some-useful-links)
   - [Introduction](#introduction)
-  - [Initial steps](#initial-steps)
   - [Explicit vs Implicit Interfaces](#explicit-vs-implicit-interfaces)
   - [`plot`](#plot)
   - [Adding a title](#adding-a-title)
@@ -33,7 +32,9 @@
   - [Matplotlib Defaults](#matplotlib-defaults)
   - [Interactive vs Non-Interactive mode](#interactive-vs-non-interactive-mode)
 
-<hr>
+---
+
+---
 
 ## Some Useful Links
 
@@ -41,13 +42,13 @@
 - [Matplotlib Documentation](https://matplotlib.org/)
 - https://www.youtube.com/watch?v=axSTGczvYIE
 
-<hr>
+---
+
+---
 
 ## Introduction
 
 Matplotlib is an integral part of the scientific Python ecosystem, and it is used for visualization. It is an extension of NumPy. It provides a Matlab-like interface for plotting and visualization.
-
-## Initial steps
 
 The matplotlib package is rather large since it encompasses quite a bit of functionality. Fortunately for us, all we need is the `pyplot` module. Rather than importing the whole `matplotlib` package, we will only import the `pyplot` module. Note that `pyplot` is traditionally aliased as `plt`.
 
@@ -55,7 +56,7 @@ The matplotlib package is rather large since it encompasses quite a bit of funct
 import matplotlib.pyplot as plt
 ```
 
-To show the Matplotlib visualizations in the notebook, you must run the following magic command:
+To show the Matplotlib visualizations in the notebook, you must run the following command:
 
 ```
 %matplotlib inline
@@ -63,7 +64,9 @@ To show the Matplotlib visualizations in the notebook, you must run the followin
 
 This forces to show the output inline, directly below the code cell that produces the visualization.
 
-<hr>
+---
+
+---
 
 ## Explicit vs Implicit Interfaces
 
@@ -116,7 +119,9 @@ We can use either interface to create visualizations. It's useful to take into a
 
 Matplotlib keeps a reference to all of the open figures created via `pyplot.figure` or `pyplot.subplots` so that the figures will not be garbage collected. Figures can be closed and deregistered from pyplot individually via `pyplot.close`; all open Figures can be closed via `plt.close('all')`.
 
-<hr>
+---
+
+---
 
 ## `plot`
 
@@ -182,7 +187,9 @@ plt.plot(x, y, x, -y)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Adding a title
 
@@ -220,7 +227,9 @@ ax.set_title("Simple plot")
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## `grid`
 
@@ -256,7 +265,9 @@ ax.grid(True)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Adjusting the x-y Axes
 
@@ -315,6 +326,8 @@ ax.set_axis_off()
 
 plt.show()
 ```
+
+---
 
 ### Changing the x-y axes values
 
@@ -402,6 +415,8 @@ print(ax.axis())
 plt.show()
 ```
 
+---
+
 ### Adding labels to x-y axes
 
 We can add the labels for the axes using the `plt.xlabel` and `plt.ylabel` methods:
@@ -450,6 +465,8 @@ ax.set_title("Simple Plot")
 plt.show()
 ```
 
+---
+
 ### Customizing the ticks on the x-y axes
 
 You can customize the values on the x- and y-axes using the `plt.xticks(<tick_locations>, <tick_labels>)` and `plt.yticks` methods:
@@ -486,7 +503,9 @@ ax.set_yticks(range(5), [100, 101, 102, 103, 104])
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Legend for the curves
 
@@ -604,7 +623,9 @@ These are the values that the `loc` argument can have:
 - `'upper center'`
 - `'center'`
 
-<hr>
+---
+
+---
 
 ## Saving visualizations
 
@@ -625,7 +646,9 @@ plt.savefig("test.png")
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Colors, Line Styles, and Markers
 
@@ -675,6 +698,8 @@ plt.plot(
 plt.show()
 ```
 
+---
+
 ### Line style
 
 We can customize the line style as follows:
@@ -695,6 +720,8 @@ plt.plot(
 
 plt.show()
 ```
+
+---
 
 ### Markers
 
@@ -731,6 +758,8 @@ plt.plot(x, y+19, '_')
 
 plt.show()
 ```
+
+---
 
 ### Combining colors, markers, and line styles
 
@@ -785,7 +814,7 @@ plt.plot(
 plt.show()
 ```
 
-<hr>
+---
 
 ### More Styling
 
@@ -875,7 +904,9 @@ plt.hlines([1, 3], xmin=0, xmax=5, colors='r', linestyles='dashed')
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Subplots
 
@@ -940,7 +971,9 @@ ax2.plot(x, x**4)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Styles
 
@@ -987,7 +1020,9 @@ with plt.style.context("Solarize_Light2"):
   plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Bar Graphs
 
@@ -1048,7 +1083,9 @@ plt.barh(y + 1/2, width=x + 5, color="g", height=0.25)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Scatter Plot
 
@@ -1084,7 +1121,9 @@ plt.scatter(x, y, s=size, alpha=0.5)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Histogram
 
@@ -1101,7 +1140,9 @@ plt.hist(x, bins=5, width=0.5)
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Pie Chart
 
@@ -1168,7 +1209,9 @@ plt.legend(title="Data:")
 plt.show()
 ```
 
-<hr>
+---
+
+---
 
 ## Matplotlib Defaults
 
@@ -1188,7 +1231,9 @@ The `matplotlib.rcParams` command is used to change these default values to any 
 
 The `matplotlib.rcdefaults()` command is used to restore default parameters.
 
-<hr>
+---
+
+---
 
 ## Interactive vs Non-Interactive mode
 
@@ -1202,4 +1247,6 @@ Using the following commands, interactive mode can be set on or off, and also ch
 - `matplotlib.pyplot.ioff()` to switch OFF the interactive mode
 - `matplotlib.is_interactive()` to check whether the interactive mode is ON (True) or OFF (False)
 
-<hr>
+---
+
+---
